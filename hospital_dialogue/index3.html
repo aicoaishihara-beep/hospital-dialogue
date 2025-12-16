@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>病院受付会話 - Hospital Reception Dialogues</title>
+<style>
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  h3 {
+    text-align: center;
+    background-color: #c8e6c9;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* 吹き出し共通設定 */
+  .message {
+    align-self: center; /* ← これで左右中央基準になる */
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 14px;
+    line-height: 1.5;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-size: 1em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-top: 4px;
+    margin-bottom: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  /* 左＝患者、右＝受付 */
+  .patient {
+    align-self: center;
+    background-color: #a8e6cf;
+    border-bottom-left-radius: 0;
+    margin-left: 0;
+	 margin-right: 30%;
+  }
+
+  .receptionist {
+    align-self: center;
+    background-color: #dcedc1;
+    border-bottom-right-radius: 0;
+    margin-right: 0;
+    margin-right: 0%; }
+
+  /* 重なり具合（PCとスマホで差をつける） */
+  @media (max-width: 600px) {
+    .patient {
+      margin-right: 50%; /* スマホでは30%重ねる */
+    }
+    .receptionist {
+      margin-left: -30%;
+    }
+  }
+
+  /* 言語部分 */
+  .lang {
+    font-size: 0.8em;
+    color: #333;
+    margin-top: 4px;
+  }
+
+  audio {
+    width: 100px;
+    margin-top: 3px;
+  }
+</style>
+</head>
+<body>
+
+<h3>🏥 病院受付会話 - Hospital Reception Dialogues</h3>
+
+<div class="chat-container">
+
+  <!-- Set 1 -->
+  <div class="message patient">
+    <b>こんにちは (Konnichiwa)</b>
+    <div class="lang">Hello<br>你好<br>Olá</div>
+    <audio controls src="audio/patient1.mp3"></audio>
+  </div>
+
+  <div class="message receptionist">
+    <b>こんにちは (Konnichiwa)</b>
+    <div class="lang">Hello<br>你好<br>Olá</div>
+    <audio controls src="audio/reception1.mp3"></audio>
+  </div>
+
+  <!-- Set 2 -->
+  <div class="message patient">
+    <b>初めてなんですが (Hajimete nan desu ga)</b>
+    <div class="lang">It’s my first time here<br>我是第一次来<br>É minha primeira vez aqui</div>
+    <audio controls src="audio/patient2.mp3"></audio>
+  </div>
+
+  <div class="message receptionist">
